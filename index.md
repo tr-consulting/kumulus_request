@@ -260,4 +260,4 @@ Vid granskningen av dokumentet ska en kortfattad sammanfattning av analysen ange
 
 
 ## Link to example file: 
-[AS Stadgar underskrivna.pdf](AS_Stadgar_underskrivna.pdf)
+[Ersta diakoni stadgar[78].pdf](Ersta_diakoni_stadgar[78].pdf)
