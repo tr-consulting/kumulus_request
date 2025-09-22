@@ -1,8 +1,8 @@
-# Instruction Page: Upload File and Run Intric Service
+# Cloud OCR and AI analytics example
 
 This page explains how we currently make **dynamic API calls** to the Intric platform.  
-We do **not** rely on static input/output definitions in Azure – everything is sent dynamically with each request.  
-A consultant should build the same flow in Azure.
+In the future we do **not** want to rely on static input/output definitions in Azure – everything is sent dynamically with each request.  
+We want the consultant to build a similar flow in Azure to replace this semi-dynamic flow.
 
 ---
 
@@ -16,12 +16,7 @@ A consultant should build the same flow in Azure.
 
 ---
 
-## Requirements
-- An **Intric API key** (never expose this in client-side code).
-- An HTTP client (e.g. `curl`, Postman, or server-side code).
-- A test document (e.g. PDF hosted in GitHub).
 
----
 
 ## Step 1 – Upload File
 
@@ -69,7 +64,7 @@ Content-Type: application/json
 **Body (JSON)**
 ```json
 {
-  "input": "<DIN PROMPT HÄR>",
+  "input": "<YOUR PROMPT HERE>",
   "files": [
     { "id": "4511bc14-a32e-4087-bc96-23154eff5c8c" }
   ]
@@ -79,7 +74,7 @@ Content-Type: application/json
 **Example (curl)**
 ```bash
 curl -X POST   https://api.intric.ai/api/v1/services/4275d5f6-3982-446a-a5dc-149916650b7d/run/   -H "Authorization: Bearer $INTRIC_API_KEY"   -H "Content-Type: application/json"   -d '{
-    "input": "<DIN PROMPT HÄR>",
+    "input": "<YOUR PROMPT HERE>",
     "files": [{ "id": "4511bc14-a32e-4087-bc96-23154eff5c8c" }]
   }'
 ```
@@ -265,4 +260,4 @@ Vid granskningen av dokumentet ska en kortfattad sammanfattning av analysen ange
 
 
 ## Link to example file: 
-[Ladda ner instruktionerna](intric_instructions.md)
+[AS Stadgar underskrivna.pdf](./AS_Stadgar_underskrivna.pdf)
