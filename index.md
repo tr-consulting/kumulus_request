@@ -248,7 +248,133 @@ Vid granskningen av dokumentet ska en kortfattad sammanfattning av analysen ange
 ## JSON Schema (in Swedish)
 
 ```json
-{"type":"object","$schema":"http://json-schema.org/draft-07/schema#","required":["summary","OrgDetails","SyfteDetails","OrganDetails","CompanySignDetails","MemberDetails","MemberRightsDetails","MeetingDetails","BoardDetails","ChangeDetails"],"properties":{"summary":{"type":"string","description":"En sammanfattande text över analysen av dokumentet."},"OrgDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean","description":"true om organisationsuppgifter är korrekta, annars false"},"snippet":{"type":"string","description":"Textutdrag från dokumentet som matchades för denna sektion."},"confidence":{"type":"number","maximum":1,"minimum":0,"description":"Säkerhet för matchning, 0 = ingen match, 1 = perfekt match"},"pageNumber":{"type":"integer","minimum":1,"description":"Sidnummer där texten hittades."}}},"BoardDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"OrganDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"SyfteDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"ChangeDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"MemberDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"MeetingDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"CompanySignDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}},"MemberRightsDetails":{"type":"object","required":["match","confidence","snippet","pageNumber"],"properties":{"match":{"type":"boolean"},"snippet":{"type":"string"},"confidence":{"type":"number","maximum":1,"minimum":0},"pageNumber":{"type":"integer","minimum":1}}}}}
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "required": [
+    "summary",
+    "OrgDetails",
+    "SyfteDetails",
+    "OrganDetails",
+    "CompanySignDetails",
+    "MemberDetails",
+    "MemberRightsDetails",
+    "MeetingDetails",
+    "BoardDetails",
+    "ChangeDetails"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "En sammanfattande text över analysen av dokumentet."
+    },
+    "OrgDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": {
+          "type": "boolean",
+          "description": "true om organisationsuppgifter är korrekta, annars false"
+        },
+        "snippet": {
+          "type": "string",
+          "description": "Textutdrag från dokumentet som matchades för denna sektion."
+        },
+        "confidence": {
+          "type": "number",
+          "maximum": 1,
+          "minimum": 0,
+          "description": "Säkerhet för matchning, 0 = ingen match, 1 = perfekt match"
+        },
+        "pageNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Sidnummer där texten hittades."
+        }
+      }
+    },
+    "BoardDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "OrganDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "SyfteDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "ChangeDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "MemberDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "MeetingDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "CompanySignDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "MemberRightsDetails": {
+      "type": "object",
+      "required": ["match", "confidence", "snippet", "pageNumber"],
+      "properties": {
+        "match": { "type": "boolean" },
+        "snippet": { "type": "string" },
+        "confidence": { "type": "number", "maximum": 1, "minimum": 0 },
+        "pageNumber": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}
 ```
 
 ---
